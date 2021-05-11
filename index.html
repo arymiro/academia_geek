@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./styles/style.css">
     <title>Formulario</title>
 </head>
-<body>
-    <h1 id="title">Formulario</h1>
-    <p id="description">Bienvenido a esta encuesta, su opinion es muy valiosa</p>
-    <form id="survey-form">
-        <label id="name-label" for="name">Nombre</label>
-        <input type="text" id="name" name="name" required/>
-        <label id="email-label"for="">Correo electronico</label>
-        <input type="email" id="email" name="email"required />
-        <label id="number-label" for="number">Numero</label>
-         <input type="number" id="number" min="0.1" max="1.21" value="Enter amount of jigawatts" placeholder="" required>
-        <nav id="dropdown" >
-            <ul>
-             <li><a href="#">Enlace 1</a></li>
-             <li><a href="#">Enlace 2</a></li>
-             <li><a href="#">Enlace 3</a></li>
-             <li><a href="#">Enlace 4</a></li>
-             <li><a href="#">Enlace 5</a></li>
-            </ul>
-            </nav>
 
+<body>
+    <div>
+        <h1 id="title">Formulario</h1>
+        <p id="description">Bienvenido a esta encuesta, su opinion es muy valiosa</p>
+        <form id="survey-form">
+            <p text-align="center">
+                <h2>Informacion personal</h2>
+                 <div class="labels">
+            <label id="name-label" for="name">Nombre</label>
+            <input type="text" id="name" value="Ingresa el nombre" placeholder="Ingresa el nombre aqui" required />
+            <label id="email-label" for="">Correo electronico</label>
+            <input type="email" id="email" value="Ingresa el email" placeholder="Ingrese el email aqui" required />
+            <label id="number-label" for="number">Numero</label>
+            <input type="number" id="number" min="1" max="100" value="Ingresa el numero"
+                placeholder="Ingresa numero aqui" required>
+                <div id="age">
+                    <h3>Ingresa tu edad</h3>
+                    <div id="ageone">
+                    <input type="checkbox" name="age" value="12-17">12-17<br>
+                    <input type="checkbox" name="age" value="18-35">18-35<br>
+                    <input type="checkbox" name="age" value="36-55">36-55<br>
+                    <input type="checkbox" name="age" value="56-72">56-72<br>
+                    </div>
+    </div>
       
-      <div id="suggestions">
-  <p>Please leave any suggestions, compliments or concerns below.  Thank you.</p>
-  <p></p>
-  <textarea row="50" cols="50">
-    Leave a comment!
+        <h2>Selecciona tu pais:</h2>
+        <div id="dropdown">
+            <select form="form_id" name="countrylist" form="survey-form">
+                <option value="colombia">Colombia</option><br>
+                <option value="spain">Spain</option><br>
+                <option value="russia">Russia</option><br>
+                <option value="england">England</option><br>
+                <option value="germany">Germany</option><br>
+                <option value="mexico"> Mexico</option><br>
+                <option value="china"> China</option><br>
+            </select><br>
+        </div>
+    
+        <div id="tiempo">  
+            <h3>Cuanto tiempo tiene viviendo en este pais:</h3>
+            <input type="radio" name="time" value="menos de 5 años"> Menos de un año<br>
+            <input type="radio" name="time" value="mas de 5 años"> Mas de 5 años<br>
+         </div>
+
+    <div id="suggestions">
+        <p>Por favor deja tus comentarios y sugerencias. Gracias.</p>
+        <p></p>
+        <textarea row="100" cols="100">
+    Deja un comentario.
   </textarea>
-</div><br>
+    </div><br>
+    <input type="submit" id="submit" value="submit">
+      
     </form>
-  
-  
+
+
 </body>
+
 </html>
